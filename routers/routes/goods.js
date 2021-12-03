@@ -16,3 +16,4 @@ goodsRouter.get('', (req, res) => {
     let json = JSON.stringify(goods)
     res.end(json)
 })
+

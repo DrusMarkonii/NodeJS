@@ -1,9 +1,9 @@
 import { Router } from "../core/Router.js";
 
-export const userRouter = new Router();
+export const usersRouter = new Router();
 
 
-userRouter.get('', (req, res) => {
+usersRouter.get('', (req, res) => {
 
     res.end(`I'm users GET Router`)
 })

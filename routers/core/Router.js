@@ -2,7 +2,7 @@ export class Router {
     routes = {}
 
     use(path, router) {
-       this.routers[path] = router.routes
+       this.routes[path] = router.routes
     }
 
     get(path, cb) {
@@ -15,6 +15,6 @@ export class Router {
 
     createRoute(path, method, cb) {
         this.routes[path] = this.routes[path] || {};
-        this.routes[path]['GET'] = cb
+        this.routes[path][method] = cb
     }
 }
