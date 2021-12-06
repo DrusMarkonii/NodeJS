@@ -11,7 +11,6 @@ http.createServer( (req, res) => {
     
     RoutesHandler.handleRequest(req, res)
 
-
 }).listen(PORT, () => {
     console.log(`Server was started on PORT ${PORT}....`)
 })
