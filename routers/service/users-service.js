@@ -1,6 +1,20 @@
-export class UsersService {
+import { sequelize } from "../database/database.state.js"
 
-    getUsersList(age) {
-        return []
+export class UsersService {
+    
+    async getUsersList(id) {
+        await sequelize.model('User').findOne({
+            where: {
+                id
+            },
+            attributes: ['firstName'],
+        })
+    }
+
+    async createUser() {
+        await sequelize.model('User').create({
+            firstName: 'lolkek',
+            lastName: 'keklol'
+        })
     }
 }
