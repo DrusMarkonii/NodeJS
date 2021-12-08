@@ -18,4 +18,10 @@ export class UsersController extends Controller {
 
         res.end(usersList)
     }
+
+    async createUser(req, res) {
+        await this.service.createUser();
+
+        res.end('User has been created')
+    }
 }
